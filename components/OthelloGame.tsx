@@ -120,7 +120,7 @@ export default function OthelloGame() {
         return JSON.stringify({
           row: bestMove[0],
           col: bestMove[1],
-          message: `最適な手: (${bestMove[0]}, ${bestMove[1]})`,
+          message: `最適な手: (${bestMove[1]}, ${bestMove[0]})`,
         });
       }
       return JSON.stringify({ message: '有効な手がありません' });
@@ -148,7 +148,7 @@ export default function OthelloGame() {
       if (bestMove) {
         const result = placePiece(bestMove[0], bestMove[1], 'white');
         if (result.success) {
-          return `(${bestMove[0]}, ${bestMove[1]})に白の石を置きました！`;
+          return `(${bestMove[1]}, ${bestMove[0]})に白の石を置きました！`;
         }
         return result.message;
       }
