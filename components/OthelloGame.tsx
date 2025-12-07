@@ -200,18 +200,18 @@ export default function OthelloGame() {
 
   return (
     <div className="flex flex-col items-center gap-6 p-8">
-      <h1 className="text-3xl font-bold">オセロ vs AI</h1>
+      <h1 className="text-3xl font-bold text-gray-900">オセロ vs AI</h1>
 
       {/* ゲーム情報 */}
       <div className="flex gap-8 text-lg">
         <div className="flex items-center gap-2">
           <div className="w-6 h-6 rounded-full bg-black border-2 border-gray-300"></div>
-          <span>黒: {black}</span>
+          <span className="font-semibold text-gray-900">黒: {black}</span>
           {currentPlayer === 'black' && !gameOver && <span className="text-green-600 font-bold">← あなたの番</span>}
         </div>
         <div className="flex items-center gap-2">
           <div className="w-6 h-6 rounded-full bg-white border-2 border-gray-800"></div>
-          <span>白: {white}</span>
+          <span className="font-semibold text-gray-900">白: {white}</span>
           {currentPlayer === 'white' && !gameOver && <span className="text-blue-600 font-bold">← AIの番</span>}
         </div>
       </div>
