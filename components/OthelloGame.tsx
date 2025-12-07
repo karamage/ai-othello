@@ -127,6 +127,35 @@ export default function OthelloGame() {
     },
   });
 
+  // AIに最適な手を打たせるアクション（計算と配置を一度に行う）
+  useCopilotAction({
+    name: 'playBestMove',
+    description: 'AIが最適な手を計算して実際に盤面に石を置きます。ユーザーが「手を打って」「石を置いて」「最適な手を打って」などと言った時に使用します。',
+    parameters: [
+      {
+        name: 'difficulty',
+        type: 'number',
+        description: '難易度（1-5、デフォルトは3）',
+        required: false,
+      },
+    ],
+    handler: async ({ difficulty = 3 }) => {
+      if (gameOver) {
+        return 'ゲームは終了しています';
+      }
+
+      const bestMove = findBestMove(board, 'white', difficulty);
+      if (bestMove) {
+        const result = placePiece(bestMove[0], bestMove[1], 'white');
+        if (result.success) {
+          return `(${bestMove[0]}, ${bestMove[1]})に白の石を置きました！`;
+        }
+        return result.message;
+      }
+      return '有効な手がありません';
+    },
+  });
+
   // ゲームをリセットするアクション
   useCopilotAction({
     name: 'resetOthelloGame',
