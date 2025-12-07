@@ -1,4 +1,4 @@
-# AI オセロゲーム - Mastra + CopilotKit
+# AI オセロゲーム - Mastra + CopilotKit(AG-UI)
 
 Next.js App RouterとMastra AIエージェント、CopilotKit UIを使用したAI対戦型オセロゲームです。
 
