@@ -4,6 +4,9 @@ Next.js App RouterとMastra AIエージェント、CopilotKit UIを使用したA
 
 ![AI Othello Game Screenshot](https://github.com/user-attachments/assets/2fc7d3e0-14bf-48e6-817f-60819d6ef714)
 
+解説記事
+![AIエージェント開発初心者向けに、Next.js x Mastra x AG-UI でAIオセロを作ってみた](https://qiita.com/karamage/items/f0b8ef19c07b5eadca41)
+
 ## 機能
 
 - **オセロゲーム**: 完全機能のオセロ（リバーシ）ゲーム
